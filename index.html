@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOCO Semiconductor Mobile Phone Cooler | Liquid Glass Edition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient Animated Frozen Canvas -->
+  <canvas id="frost-canvas"></canvas>
+
+  <!-- Ambient Light Orbs for Liquid Glass Refraction -->
+  <div class="ambient-glow glow-cyan"></div>
+  <div class="ambient-glow glow-blue"></div>
+  <div class="ambient-glow glow-purple"></div>
+
+  <!-- Main Container -->
+  <div class="site-wrapper">
+
+    <!-- Top Navigation Bar (Liquid Glass Pill) -->
+    <header class="glass-header">
+      <div class="brand-left">
+        <div class="brand-badge">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+          <span class="brand-name">HOCO.GAMING</span>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#features" class="active">ফিচারস</a>
+        <a href="#cooling-demo">লাইভ টেস্ট</a>
+        <a href="#specs">স্পেসিফিকেশন</a>
+        <a href="https://wa.me/8801880868680?text=Hello%20HOCO%20Semiconductor%20Cooler" target="_blank"><i class="fa-brands fa-whatsapp"></i> হোয়াটসঅ্যাপ</a>
+      </nav>
+
+      <div class="brand-right">
+        <div class="store-badge">
+          <span class="fs-logo">FS</span>
+          <span class="fs-sub">OFFICIAL</span>
+        </div>
+        <!-- Liquid Switch -->
+        <label class="liquid-switch" title="টগল সাউন্ড / এফেক্ট">
+          <input type="checkbox" id="ambient-audio-toggle">
+          <span class="liquid-slider"></span>
+        </label>
+      </div>
+    </header>
+
+    <!-- Hero Showcase Section -->
+    <main class="hero-section">
+      <div class="hero-grid">
+        
+        <!-- Left Column: Liquid Glass Feature Cards -->
+        <div class="feature-column left-column">
+
+          <!-- Card 1: Title & Bengali Subtitle -->
+          <div class="liquid-card glow-card hero-title-card" data-tilt>
+            <div class="card-refraction"></div>
+            <div class="card-snow-badge">
+              <i class="fa-solid fa-snowflake fa-spin-pulse" style="--fa-animation-duration: 8s;"></i>
+            </div>
+            <span class="tag-pill">GAMING TURBO COOL</span>
+            <h1 class="main-title">SEMICONDUCTOR<br><span class="highlight">MOBILE PHONE</span> COOLER</h1>
+            <p class="bn-subtitle">সেমিকন্ডাক্টর মোবাইল ফোন কুলার</p>
+          </div>
+
+          <!-- Card 2: Cooling Performance -->
+          <div class="liquid-card spec-card" data-tilt>
+            <div class="card-refraction"></div>
+            <div class="spec-icon-box">
+              <i class="fa-solid fa-temperature-arrow-down"></i>
+            </div>
+            <div class="spec-content">
+              <h3>Intense Cooling Performance</h3>
+              <p class="bn-text">তীব্র শীতল কার্যকারিতা (Drop up to -3°C)</p>
+            </div>
+            <div class="live-temp-badge" id="temp-drop-display">-28°C</div>
+          </div>
+
+          <!-- Card 3: RGB Lighting -->
+          <div class="liquid-card spec-card" data-tilt>
+            <div class="card-refraction"></div>
+            <div class="spec-icon-box rgb-animated-border">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <div class="spec-content">
+              <h3>RGB Lighting</h3>
+              <p class="bn-text">ডায়নামিক আরজিবি লাইটিং ও স্টাইলিশ গেমার ভাইব</p>
+            </div>
+            <div class="rgb-color-dots">
+              <span class="dot active" data-color="rainbow" title="Rainbow Mode"></span>
+              <span class="dot" data-color="ice" title="Ice Blue"></span>
+              <span class="dot" data-color="fire" title="Cyber Orange"></span>
+            </div>
+          </div>
+
+          <!-- Card 4: Compatibility -->
+          <div class="liquid-card spec-card" data-tilt>
+            <div class="card-refraction"></div>
+            <div class="spec-icon-box">
+              <i class="fa-solid fa-magnet"></i>
+            </div>
+            <div class="spec-content">
+              <h3>Magnetic &amp; Clip-on Compatible</h3>
+              <p class="bn-text">ম্যাগনেটিক এবং ক্লিপ-অন compatible (অল ফোন সাপোর্ট)</p>
+            </div>
+          </div>
+
+          <!-- Bottom Control Bar (Specs Pills) -->
+          <div class="liquid-card info-tray-card" data-tilt>
+            <div class="card-refraction"></div>
+            <div class="mini-control-group">
+              <div class="ctrl-icon-btn active" title="Instant Key Launch">
+                <i class="fa-solid fa-key"></i>
+              </div>
+              <div class="ctrl-icon-btn" title="AI Semiconductor Chipset">
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <div class="ctrl-icon-btn" title="Frost Mist Turbo Mode">
+                <i class="fa-solid fa-wind"></i>
+              </div>
+            </div>
+            <div class="chip-status-text">
+              <span>AL-01 TEC CHIP</span>
+              <small>ACTIVE DUAL ENGINE</small>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Center Column: Futuristic Phone & RGB Cooler Display -->
+        <div class="center-column">
+          <div class="product-viewport" id="product-container">
+            <!-- Glass ring around cooler -->
+            <div class="hologram-ring"></div>
+            <div class="hologram-ring-outer"></div>
+
+            <!-- Frost overlay simulation -->
+            <div class="frost-glass-plate" id="frost-plate">
+              <div class="frost-texture"></div>
+            </div>
+
+            <!-- Cooler Phone Visual -->
+            <div class="product-render-wrapper">
+              <img src="product-cooler.jpg" alt="Semiconductor Mobile Phone Cooler" class="product-image" id="hero-img">
+
+              <!-- Interactive Simulated RGB Ring Glow -->
+              <div class="dynamic-rgb-aura" id="cooler-aura"></div>
+              
+              <!-- Floating Ice Crystals -->
+              <div class="floating-ice-flake f1"><i class="fa-regular fa-snowflake"></i></div>
+              <div class="floating-ice-flake f2"><i class="fa-regular fa-snowflake"></i></div>
+              <div class="floating-ice-flake f3"><i class="fa-regular fa-snowflake"></i></div>
+
+              <!-- Quick Live Stats HUD -->
+              <div class="product-hud hud-top">
+                <span class="hud-label">FPS BOOST</span>
+                <span class="hud-val">90 - 120 FPS</span>
+              </div>
+              <div class="product-hud hud-bottom">
+                <span class="hud-label">CORE TEMP</span>
+                <span class="hud-val live-sensor" id="sensor-temp">12°C</span>
+              </div>
+            </div>
+
+            <!-- Interactive Action Bar Under Product -->
+            <div class="action-cta-container">
+              <button class="liquid-btn buy-btn" id="open-order-modal">
+                <span class="btn-glow"></span>
+                <span class="btn-text">
+                  <i class="fa-solid fa-bolt"></i> এখনই অর্ডার করুন (অফার প্রাইস)
+                </span>
+                <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+              </button>
+              
+              <div class="trust-pills">
+                <span><i class="fa-solid fa-shield-halved"></i> ৭ দিনের রিপ্লেসমেন্ট গ্যারান্টি</span>
+                <span><i class="fa-solid fa-truck-fast"></i> সারাদেশে ক্যাশ অন ডেলিভারি</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Levels & Hex Price Badge -->
+        <div class="feature-column right-column">
+
+          <!-- 100 Levels Cooling Control -->
+          <div class="liquid-card levels-card" data-tilt>
+            <div class="card-refraction"></div>
+            <div class="levels-header">
+              <div class="level-big-num" id="level-display">100</div>
+              <div class="level-sub-title">LEVELS</div>
+              <div class="level-mode-badge" id="level-mode-text">TURBO FREEZE</div>
+            </div>
+
+            <!-- Vertical Interactive Glass Slider -->
+            <div class="vertical-slider-wrapper">
+              <div class="vertical-slider-track">
+                <div class="vertical-slider-fill" id="slider-fill"></div>
+                <div class="slider-tick t1">Max</div>
+                <div class="slider-tick t2">Cold</div>
+                <div class="slider-tick t3">Eco</div>
+              </div>
+              <input type="range" min="10" max="100" value="100" orient="vertical" id="cooling-level-range" class="vertical-range-input">
+            </div>
+
+            <!-- Liquid Glass Toggle Switch -->
+            <div class="cooling-toggle-box">
+              <label class="liquid-switch-round">
+                <input type="checkbox" id="cooler-power-switch" checked>
+                <span class="liquid-slider-round"></span>
+              </label>
+              <span class="toggle-status" id="power-status-label">COOLING ON</span>
+            </div>
+          </div>
+
+          <!-- Hexagonal Liquid Glass Price Tag -->
+          <div class="hex-price-container" data-tilt>
+            <div class="liquid-card hex-glass-card">
+              <div class="card-refraction"></div>
+              <div class="hex-inner-content">
+                <span class="old-price">আগের দাম: <del>১৬৫০ ৳</del></span>
+                <span class="price-label">দাম:</span>
+                <span class="price-amount">১২৮০</span>
+                <span class="price-currency">টাকা</span>
+                <div class="save-badge">সেভ ৩৭০ ৳!</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Support / Contact Glass Pill -->
+          <a href="https://wa.me/8801880868680?text=Hello%20HOCO%20Semiconductor%20Cooler%20Order" target="_blank" rel="noopener noreferrer" class="liquid-card contact-pill-card contact-link-pill" data-tilt>
+            <div class="card-refraction"></div>
+            <div class="hotline-flex">
+              <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+              <div>
+                <small>প্রয়োজনে কল / হোয়াটসঅ্যাপ করুন</small>
+                <strong>01880868680</strong>
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Live Interactive Test Playground Section -->
+    <section class="test-bench-section" id="cooling-demo">
+      <div class="section-title-wrap">
+        <span class="glass-mini-tag">INTERACTIVE SIMULATION</span>
+        <h2>লাইভ সেমিকন্ডাক্টর কুলিং টেস্ট বেঞ্চ</h2>
+        <p>নিচের স্লাইডার ও বাটন দিয়ে মোবাইল কুলারের রিয়েল-টাইম কুলিং পাওয়ার এবং লাইটিং পরিবর্তন করে দেখুন</p>
+      </div>
+
+      <div class="test-bench-grid">
+        <!-- Control 1 -->
+        <div class="liquid-card bench-card">
+          <div class="card-refraction"></div>
+          <h4><i class="fa-solid fa-fan"></i> ফ্যান ও চিপ পাওয়ার লেভেল</h4>
+          <p>কুলিং ক্ষমতা বাড়িয়ে বরফ জমার মতো তীব্র শীতল অনুভব করুন</p>
+          <div class="bench-slider-row">
+            <span id="bench-level-val">100%</span>
+            <input type="range" id="bench-speed-slider" min="10" max="100" value="100">
+          </div>
+          <div class="temp-readout-row">
+            <span>আনুমানিক মোবাইল টেম্পারেচার:</span>
+            <strong class="cold-temp-text" id="bench-temp-val">12°C (আইসি ফ্রিজ)</strong>
+          </div>
+        </div>
+
+        <!-- Control 2 -->
+        <div class="liquid-card bench-card">
+          <div class="card-refraction"></div>
+          <h4><i class="fa-solid fa-wand-magic-sparkles"></i> আরজিবি লাইটিং প্রিভিউ</h4>
+          <p>আপনার পছন্দের গেমার থিম সিলেক্ট করুন</p>
+          <div class="rgb-preset-buttons">
+            <button class="glass-chip-btn active" data-preset="rainbow">🌈 Rainbow Pulse</button>
+            <button class="glass-chip-btn" data-preset="cyan">❄️ Arctic Ice</button>
+            <button class="glass-chip-btn" data-preset="purple">⚡ Neon Cyber</button>
+            <button class="glass-chip-btn" data-preset="emerald">🟢 Matrix Emerald</button>
+          </div>
+        </div>
+
+        <!-- Control 3 -->
+        <div class="liquid-card bench-card">
+          <div class="card-refraction"></div>
+          <h4><i class="fa-solid fa-gamepad"></i> কেন এই কুলারটি প্রয়োজন?</h4>
+          <ul class="glass-check-list">
+            <li><i class="fa-solid fa-check"></i> PUBG, Free Fire বা COD খেলার সময় ফোন গরম হওয়া সম্পূর্ণ বন্ধ করে।</li>
+            <li><i class="fa-solid fa-check"></i> মোবাইল ল্যাগ ও ফ্রেম ড্রপ দূর করে স্মুথ ৬০-১২০ FPS বজায় রাখে।</li>
+            <li><i class="fa-solid fa-check"></i> দীর্ঘস্থায়ী ব্যাটারি হেলথ ও প্রসেসর সুরক্ষা নিশ্চিত করে।</li>
+            <li><i class="fa-solid fa-check"></i> শব্দহীন সাইলেন্ট হাইড্রলিক ফ্যান (0 Noise)।</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specifications Table in Frosted Glass -->
+    <section class="specs-section" id="specs">
+      <div class="section-title-wrap">
+        <span class="glass-mini-tag">SPECIFICATIONS</span>
+        <h2>পণ্যটির বিস্তারিত স্পেসিফিকেশন</h2>
+      </div>
+
+      <div class="liquid-card specs-table-card">
+        <div class="card-refraction"></div>
+        <div class="specs-table-grid">
+          <div class="spec-row">
+            <span class="spec-label">মডেল ও ব্র্যান্ড:</span>
+            <span class="spec-value">HOCO Gaming Semiconductor Cooler</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">কুলিং টেকনোলজি:</span>
+            <span class="spec-value">Semiconductor TEC Peltier Chipset</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">কুলিং স্পিড / লেভেল:</span>
+            <span class="spec-value">100 Adjustable Digital Turbo Levels</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">মাউন্টিং সিস্টেম:</span>
+            <span class="spec-value">Strong Magnetic + Removable Clip-on</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">লাইটিং ইফেক্ট:</span>
+            <span class="spec-value">Dynamic RGB Multi-color Aura</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">পাওয়ার ইন্টারফেস:</span>
+            <span class="spec-value">Type-C Fast Charging Interface</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">ওজন:</span>
+            <span class="spec-value">মাত্র ৫৮ গ্রাম (আল্ট্রা লাইটওয়েট)</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">প্যাকেজে যা যা থাকবে:</span>
+            <span class="spec-value">কুলার, টাইপ-সি ক্যাবল, ম্যাগনেটিক রিং শিট, ক্লিপ ও গাইড</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+      <div class="footer-content">
+        <div class="footer-logo">HOCO.GAMING</div>
+        <p>© 2026 HOCO Bangladesh & FS Store. All Rights Reserved. Liquid Ice UI Architecture.</p>
+        <div class="footer-links">
+          <a href="#">প্রাইভেসি পলিসি</a>
+          <a href="#">রিটার্ন ও ওয়ারেন্টি</a>
+          <a href="https://wa.me/8801880868680?text=Hello%20HOCO%20Semiconductor%20Cooler" target="_blank"><i class="fa-brands fa-whatsapp"></i> হোয়াটসঅ্যাপ: 01880868680</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Liquid Glass Order Modal Drawer -->
+  <div class="modal-overlay" id="order-modal">
+    <div class="liquid-card order-modal-content">
+      <div class="card-refraction"></div>
+      <button class="modal-close-btn" id="close-modal">&times;</button>
+      
+      <div class="modal-header">
+        <span class="glass-mini-tag">CASH ON DELIVERY</span>
+        <h3>অর্ডার কনফার্ম করুন</h3>
+        <p>পণ্য হাতে পেয়ে চেক করে সম্পূর্ণ মূল্য পরিশোধ করুন</p>
+      </div>
+
+      <div class="order-summary-box">
+        <div class="summary-thumb">
+          <img src="product-cooler.jpg" alt="Cooler">
+        </div>
+        <div class="summary-details">
+          <strong>HOCO Semiconductor Phone Cooler</strong>
+          <span class="order-color-text">RGB Edition • 100 Levels Turbo</span>
+          <div class="summary-pricing">
+            <span class="sum-price">১২৮০ ৳</span>
+            <span class="delivery-badge">+ ৬০ ৳ ডেলিভারি চার্জ</span>
+          </div>
+        </div>
+      </div>
+
+      <form id="checkout-form" class="checkout-form">
+        <div class="form-group">
+          <label for="cust-name">আপনার সম্পূর্ণ নাম *</label>
+          <input type="text" id="cust-name" required placeholder="উদা: আরিফুল ইসলাম" class="glass-input">
+        </div>
+
+        <div class="form-group">
+          <label for="cust-phone">সচল মোবাইল নাম্বার *</label>
+          <input type="tel" id="cust-phone" required placeholder="উদা: 017XXXXXXXX" class="glass-input">
+        </div>
+
+        <div class="form-group">
+          <label for="cust-city">আপনার জেলা / শহর *</label>
+          <select id="cust-city" class="glass-input" required>
+            <option value="dhaka">ঢাকার ভিতরে (৬০ টাকা)</option>
+            <option value="outside">ঢাকার বাইরে (১২০ টাকা)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="cust-address">সম্পূর্ণ ডেলিভারি ঠিকানা *</label>
+          <textarea id="cust-address" rows="2" required placeholder="বাড়ি নং, রোড নং, এলাকা/উপজেলা, জেলা" class="glass-input"></textarea>
+        </div>
+
+        <div class="total-row">
+          <span>সর্বমোট প্রদেয় টাকা:</span>
+          <strong id="final-total">১৩৪০ ৳</strong>
+        </div>
+
+        <button type="submit" class="liquid-btn confirm-order-btn">
+          <span class="btn-glow"></span>
+          <span class="btn-text"><i class="fa-solid fa-circle-check"></i> অর্ডারটি নিশ্চিত করুন</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Order Success Notification Toast -->
+  <div class="toast-notification" id="order-toast">
+    <div class="toast-card liquid-card">
+      <i class="fa-solid fa-circle-check toast-icon"></i>
+      <div>
+        <h4>অর্ডার সফল হয়েছে!</h4>
+        <p>আপনার অর্ডার তথ্য আমাদের হোয়াটসঅ্যাপে পাঠানো হচ্ছে...</p>
+        <a href="#" id="toast-wa-btn" target="_blank" class="toast-wa-link">
+          <i class="fa-brands fa-whatsapp"></i> হোয়াটসঅ্যাপ ওপেন করুন
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Liquid Glass WhatsApp Button -->
+  <a href="https://wa.me/8801880868680?text=Hello%20HOCO%20Semiconductor%20Cooler" target="_blank" rel="noopener noreferrer" class="floating-whatsapp-pill" title="WhatsApp Chat">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>01880868680</span>
+  </a>
+
+  <script src="app.js"></script>
+</body>
+</html>
